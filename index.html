@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Μπουτίκ Κρεάτων — Παραδοσιακό Κρεοπωλείο</title>
+<meta name="description" content="Μπουτίκ Κρεάτων — επιλεγμένα κρέατα, αλλαντικά και προϊόντα κρεοπωλείου. Επισκεφθείτε μας ή καλέστε για παραγγελία.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2317130f%22/><text x=%2250%22 y=%2265%22 font-size=%2244%22 font-family=%22Georgia,serif%22 fill=%22%23b8862c%22 text-anchor=%22middle%22>MK</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ GATE / SPLASH SCREEN ============ -->
+<div class="gate" id="gate">
+  <div class="gate-inner">
+    <div class="gate-logo">ΜΠΟΥΤΙΚ<span>ΚΡΕΑΤΩΝ</span></div>
+    <p class="gate-question">Πώς θα θέλατε να συνεχίσετε;</p>
+    <div class="gate-options">
+      <button class="gate-btn" data-choice="retail">
+        <span class="gate-btn-title">Λιανική</span>
+        <span class="gate-btn-sub">Για τον καταναλωτή</span>
+      </button>
+      <button class="gate-btn" data-choice="wholesale">
+        <span class="gate-btn-title">Χονδρική</span>
+        <span class="gate-btn-sub">Για επαγγελματίες</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="header">
+  <div class="header-inner">
+    <a href="#top" class="logo">Μπουτίκ<span>Κρεάτων</span></a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#about" class="nav-link">Ιστορία</a>
+      <a href="#cuts" class="nav-link">Επιλεγμένα</a>
+      <a href="#visit" class="nav-link">Επισκεφθείτε</a>
+      <button class="nav-link nav-link--btn" id="navOptions">Επιλογές</button>
+    </nav>
+
+    <div class="header-actions">
+      <a href="tel:+302101234567" class="btn btn--call">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.6.4-1 1-1H7.4c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.6.1.4 0 .7-.2 1L6.6 10.8z"/></svg>
+        <span>Καλέστε</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile drawer (kept outside <header> so its position:fixed isn't
+     contained by the header's backdrop-filter, which would trap it) -->
+<div class="drawer" id="drawer">
+  <a href="#about" class="drawer-link">Ιστορία</a>
+  <a href="#cuts" class="drawer-link">Επιλεγμένα</a>
+  <a href="#visit" class="drawer-link">Επισκεφθείτε</a>
+  <button class="drawer-link drawer-link--btn" id="drawerOptions">Επιλογές</button>
+  <a href="tel:+302101234567" class="btn btn--call btn--drawer">Καλέστε: 210 123 4567</a>
+</div>
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+<main>
+
+<!-- ============ SECTION 1 — HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" id="heroBg">
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="">
+      <!-- Πραγματικό βίντεο καταστήματος: τοποθετήστε το αρχείο και ενεργοποιήστε το <source> -->
+      <!-- <source src="assets/video/hero-loop.mp4" type="video/mp4"> -->
+    </video>
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-logo">ΜΚ</div>
+    <p class="hero-tagline">Κρέας με σεβασμό στην παράδοση, κάθε μέρα φρέσκο</p>
+    <p class="hero-subtitle">Μπουτίκ Κρεάτων — Αθήνα</p>
+
+    <div class="hero-ctas">
+      <a href="tel:+302101234567" class="btn btn--primary">Καλέστε για παραγγελία</a>
+      <a href="#cuts" class="btn btn--ghost">Δείτε τα κρέατα</a>
+      <a href="#visit" class="btn btn--ghost">Δείτε στον χάρτη</a>
+      <a href="#review" class="btn btn--ghost">Αφήστε κριτική</a>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Μετάβαση στην επόμενη ενότητα">
+    <svg viewBox="0 0 24 24"><path d="M12 16.5 4.5 9l1.4-1.4L12 13.7l6.1-6.1L19.5 9z"/></svg>
+  </a>
+</section>
+
+<!-- ============ SECTION 2 — ABOUT ============ -->
+<section class="about parallax-section" id="about" data-parallax>
+  <div class="parallax-bg parallax-bg--exterior"><span class="ph-badge">Φωτογραφία εξωτερικού καταστήματος</span></div>
+  <div class="section-overlay"></div>
+
+  <div class="section-inner about-inner">
+    <p class="eyebrow">Η ιστορία μας</p>
+    <h2>Τρεις γενιές αφοσιωμένες στην τέχνη του κρέατος</h2>
+    <p class="lead">
+      Από το 1985, το Μπουτίκ Κρεάτων επιλέγει προσεκτικά κάθε κομμάτι που φτάνει στον πάγκο του.
+      Συνεργαζόμαστε με τοπικούς παραγωγούς, τεμαχίζουμε με παραδοσιακές τεχνικές και σεβόμαστε
+      κάθε στάδιο — από το ζώο μέχρι το πιάτο σας. Ποιότητα που φαίνεται, γεύση που θυμάστε.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-number" data-count="1985" data-format="year">0</span>
+        <span class="stat-label">Έτος Έναρξης</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" data-count="3">0</span>
+        <span class="stat-label">Γενιές στο Κρεοπωλείο</span>
+      </div>
+      <div class="stat">
+        <span class="stat-number" data-count="100" data-suffix="%">0</span>
+        <span class="stat-label">Ολόκληρο Ζώο</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 3 — ΕΠΙΛΕΓΜΕΝΑ ΚΡΕΑΤΑ ============ -->
+<section class="cuts parallax-section" id="cuts" data-parallax>
+  <div class="parallax-bg parallax-bg--interior"><span class="ph-badge">Φωτογραφία εσωτερικού καταστήματος</span></div>
+  <div class="section-overlay section-overlay--light"></div>
+
+  <div class="section-inner">
+    <p class="eyebrow eyebrow--light">Ο πάγκος μας</p>
+    <h2 class="light">Επιλεγμένα κρέατα</h2>
+
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab is-active" data-filter="all">Όλα</button>
+      <button class="filter-tab" data-filter="chicken">Κοτόπουλα</button>
+      <button class="filter-tab" data-filter="pork">Χοιρινά</button>
+      <button class="filter-tab" data-filter="beef">Μοσχαρίσια</button>
+      <button class="filter-tab" data-filter="lamb">Αρνίσια</button>
+      <button class="filter-tab" data-filter="cured">Αλλαντικά</button>
+    </div>
+
+    <div class="carousel-wrap">
+      <button class="carousel-arrow carousel-arrow--prev" id="prevArrow" aria-label="Προηγούμενο">‹</button>
+
+      <div class="carousel" id="carousel">
+        <!-- Κοτόπουλα -->
+        <article class="cut-card" data-cat="chicken">
+          <div class="cut-photo cut-photo--chicken"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Κοτόπουλα</span></div>
+          <h3>Κοτόπουλο Ολόκληρο</h3>
+        </article>
+        <article class="cut-card" data-cat="chicken">
+          <div class="cut-photo cut-photo--chicken"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Κοτόπουλα</span></div>
+          <h3>Φιλέτο Στήθος</h3>
+        </article>
+        <article class="cut-card" data-cat="chicken">
+          <div class="cut-photo cut-photo--chicken"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Κοτόπουλα</span></div>
+          <h3>Μπούτι Κοτόπουλο</h3>
+        </article>
+
+        <!-- Χοιρινά -->
+        <article class="cut-card" data-cat="pork">
+          <div class="cut-photo cut-photo--pork"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Χοιρινά</span></div>
+          <h3>Χοιρινή Μπριζόλα</h3>
+        </article>
+        <article class="cut-card" data-cat="pork">
+          <div class="cut-photo cut-photo--pork"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Χοιρινά</span></div>
+          <h3>Χοιρινό Σουβλάκι</h3>
+        </article>
+        <article class="cut-card" data-cat="pork">
+          <div class="cut-photo cut-photo--pork"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Χοιρινά</span></div>
+          <h3>Πανσέτα</h3>
+        </article>
+
+        <!-- Μοσχαρίσια -->
+        <article class="cut-card" data-cat="beef">
+          <div class="cut-photo cut-photo--beef"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Μοσχαρίσια</span></div>
+          <h3>Μπριζόλα Ribeye</h3>
+        </article>
+        <article class="cut-card" data-cat="beef">
+          <div class="cut-photo cut-photo--beef"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Μοσχαρίσια</span></div>
+          <h3>Κιμάς Μοσχαρίσιος</h3>
+        </article>
+        <article class="cut-card" data-cat="beef">
+          <div class="cut-photo cut-photo--beef"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Μοσχαρίσια</span></div>
+          <h3>Οσομπούκο</h3>
+        </article>
+
+        <!-- Αρνίσια -->
+        <article class="cut-card" data-cat="lamb">
+          <div class="cut-photo cut-photo--lamb"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αρνίσια</span></div>
+          <h3>Αρνίσιο Μπούτι</h3>
+        </article>
+        <article class="cut-card" data-cat="lamb">
+          <div class="cut-photo cut-photo--lamb"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αρνίσια</span></div>
+          <h3>Παϊδάκια Αρνίσια</h3>
+        </article>
+
+        <!-- Αλλαντικά -->
+        <article class="cut-card" data-cat="cured">
+          <div class="cut-photo cut-photo--cured"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αλλαντικά</span></div>
+          <h3>Λουκάνικο Χωριάτικο</h3>
+        </article>
+        <article class="cut-card" data-cat="cured">
+          <div class="cut-photo cut-photo--cured"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αλλαντικά</span></div>
+          <h3>Μπέικον</h3>
+        </article>
+      </div>
+
+      <button class="carousel-arrow carousel-arrow--next" id="nextArrow" aria-label="Επόμενο">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 4 — REVIEW CTA ============ -->
+<section class="review-cta" id="review">
+  <div class="stars" aria-hidden="true">★★★★★</div>
+  <h3>Μείνατε ευχαριστημένοι; Αφήστε μας μια κριτική</h3>
+  <a href="https://search.google.com/local/writereview?placeid=REPLACE_WITH_PLACE_ID" target="_blank" rel="noopener" class="btn btn--primary">Κριτική στο Google</a>
+</section>
+
+<!-- ============ SECTION 5 — QUOTE ============ -->
+<section class="quote parallax-section" data-parallax>
+  <div class="parallax-bg parallax-bg--ambience"><span class="ph-badge">Φωτογραφία ατμόσφαιρας καταστήματος</span></div>
+  <div class="section-overlay"></div>
+
+  <div class="section-inner quote-inner">
+    <span class="quote-mark">"</span>
+    <blockquote>
+      Δεν πουλάμε απλά κρέας — μεταφέρουμε μια παράδοση τριών γενιών, χτισμένη πάνω
+      στην εμπιστοσύνη της γειτονιάς μας και στον σεβασμό προς το προϊόν.
+    </blockquote>
+    <cite>Μπουτίκ Κρεάτων — Αθήνα</cite>
+  </div>
+</section>
+
+<!-- ============ SECTION 6 — ΕΠΙΣΚΕΦΘΕΙΤΕ ============ -->
+<section class="visit" id="visit">
+  <div class="section-inner visit-inner">
+    <div class="visit-info">
+      <p class="eyebrow">Βρείτε μας</p>
+      <h2>Επισκεφθείτε το κατάστημα</h2>
+      <p class="visit-address">Οδός Παραδείγματος 12, 104 32 Αθήνα</p>
+      <p class="visit-phone">Τηλέφωνο: <a href="tel:+302101234567">210 123 4567</a></p>
+
+      <div class="visit-ctas">
+        <a href="https://maps.google.com/?q=REPLACE_WITH_ADDRESS" target="_blank" rel="noopener" class="btn btn--primary">Οδηγίες</a>
+        <a href="tel:+302101234567" class="btn btn--ghost-dark">Τηλέφωνο</a>
+        <a href="#review" class="btn btn--ghost-dark">Αφήστε κριτική</a>
+      </div>
+    </div>
+
+    <div class="hours-card">
+      <div class="hours-status" id="hoursStatus">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">Έλεγχος ωραρίου…</span>
+      </div>
+      <ul class="hours-list" id="hoursList">
+        <li data-day="1"><span>Δευτέρα</span><span>08:00 – 20:00</span></li>
+        <li data-day="2"><span>Τρίτη</span><span>08:00 – 20:00</span></li>
+        <li data-day="3"><span>Τετάρτη</span><span>08:00 – 20:00</span></li>
+        <li data-day="4"><span>Πέμπτη</span><span>08:00 – 20:00</span></li>
+        <li data-day="5"><span>Παρασκευή</span><span>08:00 – 21:00</span></li>
+        <li data-day="6"><span>Σάββατο</span><span>08:00 – 15:00</span></li>
+        <li data-day="0"><span>Κυριακή</span><span>Κλειστά</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="#top" class="logo logo--footer">Μπουτίκ<span>Κρεάτων</span></a>
+    <nav class="footer-links">
+      <a href="#about">Ιστορία</a>
+      <a href="#cuts">Επιλεγμένα Κρέατα</a>
+      <a href="#visit">Επισκεφθείτε μας</a>
+    </nav>
+    <p class="footer-copy">&copy; <span id="year"></span> Μπουτίκ Κρεάτων — Αθήνα</p>
+  </div>
+</footer>
+
+<!-- ============ EXTRAS ============ -->
+<button class="back-to-top" id="backToTop" aria-label="Επιστροφή στην κορυφή">
+  <svg viewBox="0 0 24 24"><path d="M12 7.5 19.5 15l-1.4 1.4L12 10.3l-6.1 6.1L4.5 15z"/></svg>
+</button>
+
+<script src="js/main.js"></script>
+</body>
+</html>
