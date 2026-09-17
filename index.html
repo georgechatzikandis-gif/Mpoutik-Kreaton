@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Μπουτίκ Κρεάτων — Παραδοσιακό Κρεοπωλείο</title>
 <meta name="description" content="Μπουτίκ Κρεάτων — επιλεγμένα κρέατα, αλλαντικά και προϊόντα κρεοπωλείου. Επισκεφθείτε μας ή καλέστε για παραγγελία.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%2317130f%22/><text x=%2250%22 y=%2265%22 font-size=%2244%22 font-family=%22Georgia,serif%22 fill=%22%23b8862c%22 text-anchor=%22middle%22>MK</text></svg>">
+<link rel="icon" type="image/jpeg" href="assets/logo/favicon-256.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
 <!-- ============ GATE / SPLASH SCREEN ============ -->
 <div class="gate" id="gate">
   <div class="gate-inner">
-    <div class="gate-logo">ΜΠΟΥΤΙΚ<span>ΚΡΕΑΤΩΝ</span></div>
+    <img src="assets/logo/logo-mark.jpg" alt="Μπουτίκ Κρεάτων" class="gate-logo-img">
     <p class="gate-question">Πώς θα θέλατε να συνεχίσετε;</p>
     <div class="gate-options">
       <button class="gate-btn" data-choice="retail">
@@ -34,7 +34,10 @@
 <!-- ============ HEADER ============ -->
 <header class="site-header" id="header">
   <div class="header-inner">
-    <a href="#top" class="logo">Μπουτίκ<span>Κρεάτων</span></a>
+    <a href="#top" class="logo">
+      <img src="assets/logo/logo-mark.jpg" alt="" class="logo-icon">
+      <span class="logo-text">Μπουτίκ<span>Κρεάτων</span></span>
+    </a>
 
     <nav class="main-nav" id="mainNav">
       <a href="#about" class="nav-link">Ιστορία</a>
@@ -71,17 +74,18 @@
 <!-- ============ SECTION 1 — HERO ============ -->
 <section class="hero" id="top">
   <div class="hero-bg" id="heroBg">
-    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="">
-      <!-- Πραγματικό βίντεο καταστήματος: τοποθετήστε το αρχείο και ενεργοποιήστε το <source> -->
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="assets/photos/hero.jpg">
+      <!-- Πραγματικό βίντεο καταστήματος: προσθέστε αρχείο και ενεργοποιήστε το <source> -->
       <!-- <source src="assets/video/hero-loop.mp4" type="video/mp4"> -->
     </video>
     <div class="hero-overlay"></div>
   </div>
 
   <div class="hero-content">
-    <div class="hero-logo">ΜΚ</div>
+    <img src="assets/logo/logo-mark.jpg" alt="Μπουτίκ Κρεάτων" class="hero-logo">
     <p class="hero-tagline">Κρέας με σεβασμό στην παράδοση, κάθε μέρα φρέσκο</p>
-    <p class="hero-subtitle">Μπουτίκ Κρεάτων — Αθήνα</p>
+    <p class="hero-subtitle">Μπουτίκ Κρεάτων — Ρόδος</p>
+    <p class="hero-slogan">Η καρδιά μας χτυπάει Ελληνικά</p>
 
     <div class="hero-ctas">
       <a href="tel:+302101234567" class="btn btn--primary">Καλέστε για παραγγελία</a>
@@ -98,38 +102,46 @@
 
 <!-- ============ SECTION 2 — ABOUT ============ -->
 <section class="about parallax-section" id="about" data-parallax>
-  <div class="parallax-bg parallax-bg--exterior"><span class="ph-badge">Φωτογραφία εξωτερικού καταστήματος</span></div>
+  <div class="parallax-bg parallax-bg--exterior"></div>
   <div class="section-overlay"></div>
 
   <div class="section-inner about-inner">
-    <p class="eyebrow">Η ιστορία μας</p>
-    <h2>Τρεις γενιές αφοσιωμένες στην τέχνη του κρέατος</h2>
-    <p class="lead">
-      Από το 1985, το Μπουτίκ Κρεάτων επιλέγει προσεκτικά κάθε κομμάτι που φτάνει στον πάγκο του.
-      Συνεργαζόμαστε με τοπικούς παραγωγούς, τεμαχίζουμε με παραδοσιακές τεχνικές και σεβόμαστε
-      κάθε στάδιο — από το ζώο μέχρι το πιάτο σας. Ποιότητα που φαίνεται, γεύση που θυμάστε.
-    </p>
+    <div class="about-text">
+      <p class="eyebrow">Η ιστορία μας</p>
+      <h2>Βραβευμένη τέχνη του κρέατος, φτιαγμένη στη Ρόδο</h2>
+      <p class="lead">
+        Το Μπουτίκ Κρεάτων επιλέγει προσεκτικά κάθε κομμάτι που φτάνει στον πάγκο του.
+        Τεμαχίζουμε με παραδοσιακές τεχνικές, σεβόμαστε κάθε στάδιο — από το ζώο μέχρι το
+        πιάτο σας — και το 2025 τιμηθήκαμε ως Βραβευμένη Επιχείρηση από τους «Αετούς των
+        Τροφίμων». Ποιότητα που φαίνεται, γεύση που θυμάστε.
+      </p>
 
-    <div class="stats">
-      <div class="stat">
-        <span class="stat-number" data-count="1985" data-format="year">0</span>
-        <span class="stat-label">Έτος Έναρξης</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number" data-count="3">0</span>
-        <span class="stat-label">Γενιές στο Κρεοπωλείο</span>
-      </div>
-      <div class="stat">
-        <span class="stat-number" data-count="100" data-suffix="%">0</span>
-        <span class="stat-label">Ολόκληρο Ζώο</span>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number" data-count="1985" data-format="year">0</span>
+          <span class="stat-label">Έτος Έναρξης</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label">Γενιές στο Κρεοπωλείο</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-count="100" data-suffix="%">0</span>
+          <span class="stat-label">Ολόκληρο Ζώο</span>
+        </div>
       </div>
     </div>
+
+    <figure class="about-owner">
+      <img src="assets/photos/owner.jpg" alt="Ο Κώστας Μαργάρης στο κρεοπωλείο Μπουτίκ Κρεάτων" loading="lazy">
+      <figcaption>Κώστας Μαργάρης<span>Ιδιοκτήτης</span></figcaption>
+    </figure>
   </div>
 </section>
 
 <!-- ============ SECTION 3 — ΕΠΙΛΕΓΜΕΝΑ ΚΡΕΑΤΑ ============ -->
 <section class="cuts parallax-section" id="cuts" data-parallax>
-  <div class="parallax-bg parallax-bg--interior"><span class="ph-badge">Φωτογραφία εσωτερικού καταστήματος</span></div>
+  <div class="parallax-bg parallax-bg--interior"></div>
   <div class="section-overlay section-overlay--light"></div>
 
   <div class="section-inner">
@@ -151,64 +163,64 @@
       <div class="carousel" id="carousel">
         <!-- Κοτόπουλα -->
         <article class="cut-card" data-cat="chicken">
-          <div class="cut-photo cut-photo--chicken"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Κοτόπουλα</span></div>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/chicken-1.jpg')"><span class="badge">Κοτόπουλα</span></div>
+          <h3>Σουβλάκι Κοτόπουλο</h3>
+        </article>
+        <article class="cut-card" data-cat="chicken">
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/chicken-2.jpg')"><span class="badge">Κοτόπουλα</span></div>
           <h3>Κοτόπουλο Ολόκληρο</h3>
         </article>
         <article class="cut-card" data-cat="chicken">
-          <div class="cut-photo cut-photo--chicken"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Κοτόπουλα</span></div>
-          <h3>Φιλέτο Στήθος</h3>
-        </article>
-        <article class="cut-card" data-cat="chicken">
-          <div class="cut-photo cut-photo--chicken"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Κοτόπουλα</span></div>
-          <h3>Μπούτι Κοτόπουλο</h3>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/chicken-3.jpg')"><span class="badge">Κοτόπουλα</span></div>
+          <h3>Σουβλάκι με Πιπεριά</h3>
         </article>
 
         <!-- Χοιρινά -->
         <article class="cut-card" data-cat="pork">
-          <div class="cut-photo cut-photo--pork"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Χοιρινά</span></div>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/pork-1.jpg')"><span class="badge">Χοιρινά</span></div>
+          <h3>Χοιρινό Μπούτι</h3>
+        </article>
+        <article class="cut-card" data-cat="pork">
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/pork-2.jpg')"><span class="badge">Χοιρινά</span></div>
           <h3>Χοιρινή Μπριζόλα</h3>
         </article>
         <article class="cut-card" data-cat="pork">
-          <div class="cut-photo cut-photo--pork"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Χοιρινά</span></div>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/pork-3.jpg')"><span class="badge">Χοιρινά</span></div>
           <h3>Χοιρινό Σουβλάκι</h3>
-        </article>
-        <article class="cut-card" data-cat="pork">
-          <div class="cut-photo cut-photo--pork"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Χοιρινά</span></div>
-          <h3>Πανσέτα</h3>
         </article>
 
         <!-- Μοσχαρίσια -->
         <article class="cut-card" data-cat="beef">
-          <div class="cut-photo cut-photo--beef"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Μοσχαρίσια</span></div>
-          <h3>Μπριζόλα Ribeye</h3>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/beef-1.jpg')"><span class="badge">Μοσχαρίσια</span></div>
+          <h3>Στρογγυλό Βοείου</h3>
         </article>
         <article class="cut-card" data-cat="beef">
-          <div class="cut-photo cut-photo--beef"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Μοσχαρίσια</span></div>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/beef-2.jpg')"><span class="badge">Μοσχαρίσια</span></div>
+          <h3>Κιλότο Βοείου</h3>
+        </article>
+        <article class="cut-card" data-cat="beef">
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/beef-3.jpg')"><span class="badge">Μοσχαρίσια</span></div>
           <h3>Κιμάς Μοσχαρίσιος</h3>
-        </article>
-        <article class="cut-card" data-cat="beef">
-          <div class="cut-photo cut-photo--beef"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Μοσχαρίσια</span></div>
-          <h3>Οσομπούκο</h3>
         </article>
 
         <!-- Αρνίσια -->
         <article class="cut-card" data-cat="lamb">
-          <div class="cut-photo cut-photo--lamb"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αρνίσια</span></div>
-          <h3>Αρνίσιο Μπούτι</h3>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/lamb-1.jpg')"><span class="badge">Αρνίσια</span></div>
+          <h3>Βετούλι Ντόπιο</h3>
         </article>
         <article class="cut-card" data-cat="lamb">
-          <div class="cut-photo cut-photo--lamb"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αρνίσια</span></div>
-          <h3>Παϊδάκια Αρνίσια</h3>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/lamb-2.jpg')"><span class="badge">Αρνίσια</span></div>
+          <h3>Τράγος Ντόπιος</h3>
         </article>
 
         <!-- Αλλαντικά -->
         <article class="cut-card" data-cat="cured">
-          <div class="cut-photo cut-photo--cured"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αλλαντικά</span></div>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/cured-1.jpg')"><span class="badge">Αλλαντικά</span></div>
           <h3>Λουκάνικο Χωριάτικο</h3>
         </article>
         <article class="cut-card" data-cat="cured">
-          <div class="cut-photo cut-photo--cured"><span class="ph-badge ph-badge--sm">Φωτογραφία</span><span class="badge">Αλλαντικά</span></div>
-          <h3>Μπέικον</h3>
+          <div class="cut-photo" style="background-image:url('assets/photos/cuts/cured-2.jpg')"><span class="badge">Αλλαντικά</span></div>
+          <h3>Ρολό Γεμιστό</h3>
         </article>
       </div>
 
@@ -226,16 +238,16 @@
 
 <!-- ============ SECTION 5 — QUOTE ============ -->
 <section class="quote parallax-section" data-parallax>
-  <div class="parallax-bg parallax-bg--ambience"><span class="ph-badge">Φωτογραφία ατμόσφαιρας καταστήματος</span></div>
+  <div class="parallax-bg parallax-bg--ambience"></div>
   <div class="section-overlay"></div>
 
   <div class="section-inner quote-inner">
     <span class="quote-mark">"</span>
     <blockquote>
-      Δεν πουλάμε απλά κρέας — μεταφέρουμε μια παράδοση τριών γενιών, χτισμένη πάνω
-      στην εμπιστοσύνη της γειτονιάς μας και στον σεβασμό προς το προϊόν.
+      Δεν πουλάμε απλά κρέας — μεταφέρουμε μια παράδοση χτισμένη πάνω στην εμπιστοσύνη
+      της γειτονιάς μας και στον σεβασμό προς το προϊόν. Η καρδιά μας χτυπάει Ελληνικά.
     </blockquote>
-    <cite>Μπουτίκ Κρεάτων — Αθήνα</cite>
+    <cite>Κώστας Μαργάρης — Μπουτίκ Κρεάτων, Ρόδος</cite>
   </div>
 </section>
 
@@ -245,11 +257,11 @@
     <div class="visit-info">
       <p class="eyebrow">Βρείτε μας</p>
       <h2>Επισκεφθείτε το κατάστημα</h2>
-      <p class="visit-address">Οδός Παραδείγματος 12, 104 32 Αθήνα</p>
+      <p class="visit-address">Ρόδος (ακριβής διεύθυνση: προς συμπλήρωση)</p>
       <p class="visit-phone">Τηλέφωνο: <a href="tel:+302101234567">210 123 4567</a></p>
 
       <div class="visit-ctas">
-        <a href="https://maps.google.com/?q=REPLACE_WITH_ADDRESS" target="_blank" rel="noopener" class="btn btn--primary">Οδηγίες</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Μπουτίκ+Κρεάτων+Μαργάρης+Κώστας+Ρόδος" target="_blank" rel="noopener" class="btn btn--primary">Οδηγίες</a>
         <a href="tel:+302101234567" class="btn btn--ghost-dark">Τηλέφωνο</a>
         <a href="#review" class="btn btn--ghost-dark">Αφήστε κριτική</a>
       </div>
@@ -278,13 +290,16 @@
 <!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="footer-inner">
-    <a href="#top" class="logo logo--footer">Μπουτίκ<span>Κρεάτων</span></a>
+    <a href="#top" class="logo logo--footer">
+      <img src="assets/logo/logo-mark.jpg" alt="" class="logo-icon">
+      <span class="logo-text">Μπουτίκ<span>Κρεάτων</span></span>
+    </a>
     <nav class="footer-links">
       <a href="#about">Ιστορία</a>
       <a href="#cuts">Επιλεγμένα Κρέατα</a>
       <a href="#visit">Επισκεφθείτε μας</a>
     </nav>
-    <p class="footer-copy">&copy; <span id="year"></span> Μπουτίκ Κρεάτων — Αθήνα</p>
+    <p class="footer-copy">&copy; <span id="year"></span> Μπουτίκ Κρεάτων — Μαργάρης Κώστας, Ρόδος</p>
   </div>
 </footer>
 
