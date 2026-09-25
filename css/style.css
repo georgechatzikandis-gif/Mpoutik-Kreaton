@@ -311,34 +311,43 @@ h2.light { color: var(--cream); }
 .section-overlay { position: absolute; inset: 0; background: rgba(246,239,228,.9); z-index: 1; }
 .section-overlay--light { background: rgba(15,12,9,.72); }
 
-.about .section-inner {
-  max-width: 1080px;
+.about .section-inner { max-width: 720px; }
+
+/* ============ INTRO ============ */
+.intro { background: var(--charcoal); padding: 90px 0; }
+
+.intro-inner {
   display: grid;
-  grid-template-columns: 1.3fr .7fr;
+  grid-template-columns: .8fr 1.2fr;
   gap: 56px;
   align-items: center;
 }
 
-.about-owner {
-  justify-self: center;
-  text-align: center;
-}
-.about-owner img {
+.intro-photo img {
   width: 100%;
-  max-width: 280px;
+  max-width: 340px;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center 15%;
+  object-position: center 12%;
   border-radius: 8px;
-  box-shadow: 0 16px 40px rgba(0,0,0,.25);
+  box-shadow: 0 20px 48px rgba(0,0,0,.4);
 }
-.about-owner figcaption {
-  margin-top: 14px;
+
+.intro-lead {
+  max-width: 560px;
+  font-size: 1.05rem;
+  color: var(--cream-dim);
+  margin-top: 4px;
+}
+
+.intro-signature {
+  margin-top: 28px;
   font-family: var(--font-display);
   font-weight: 600;
-  color: var(--charcoal);
+  color: var(--cream);
+  font-size: 1.1rem;
 }
-.about-owner figcaption span {
+.intro-signature span {
   display: block;
   font-family: var(--font-body);
   font-weight: 500;
@@ -346,7 +355,7 @@ h2.light { color: var(--cream); }
   letter-spacing: .06em;
   text-transform: uppercase;
   color: var(--gold);
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
 .stats { display: flex; gap: 48px; margin-top: 44px; flex-wrap: wrap; }
@@ -557,9 +566,9 @@ h2.light { color: var(--cream); }
   .main-nav { display: none; }
   .burger { display: flex; }
   .visit-inner { grid-template-columns: 1fr; }
-  .about .section-inner { grid-template-columns: 1fr; text-align: center; }
-  .about-owner { order: -1; }
-  .about .lead { margin: 0 auto; }
+  .intro-inner { grid-template-columns: 1fr; text-align: center; }
+  .intro-photo { justify-self: center; }
+  .intro-lead { margin: 0 auto; }
   .header-actions .btn--call span { display: none; }
   .header-actions .btn--call { padding: 10px; border-radius: 50%; }
 }
