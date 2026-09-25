@@ -92,13 +92,20 @@ h2.light { color: var(--cream); }
 /* ============ GATE / SPLASH ============ */
 .gate {
   position: fixed; inset: 0; z-index: 999;
-  background: var(--charcoal);
+  background-color: var(--charcoal);
+  background-size: cover;
+  background-position: center 15%;
   display: flex; align-items: center; justify-content: center;
   transition: opacity .5s ease, visibility .5s ease;
 }
 .gate.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.gate-inner { text-align: center; padding: 24px; }
+.gate-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(15,12,9,.55) 0%, rgba(15,12,9,.45) 45%, rgba(15,12,9,.85) 100%);
+}
+
+.gate-inner { position: relative; z-index: 1; text-align: center; padding: 24px; }
 
 .gate-logo-img {
   width: 140px; height: 140px;
@@ -117,6 +124,7 @@ h2.light { color: var(--cream); }
   padding: 22px 28px;
   border: 1.5px solid rgba(246,239,228,.3);
   border-radius: 6px;
+  background: rgba(15,12,9,.35);
   color: var(--cream);
   display: flex;
   flex-direction: column;
@@ -268,28 +276,6 @@ h2.light { color: var(--cream); }
   font-style: italic;
   margin-bottom: 32px;
 }
-
-.hero-choice {
-  display: flex; align-items: center; flex-wrap: wrap;
-  justify-content: center; gap: 10px;
-  margin-bottom: 28px;
-}
-.hero-choice-label {
-  color: var(--cream-dim);
-  font-size: .82rem;
-  letter-spacing: .04em;
-}
-.hero-choice-btn {
-  padding: 8px 20px;
-  border: 1.5px solid rgba(246,239,228,.4);
-  border-radius: 999px;
-  color: var(--cream);
-  font-size: .85rem;
-  font-weight: 600;
-  transition: border-color .2s ease, background .2s ease, color .2s ease;
-}
-.hero-choice-btn:hover { border-color: var(--gold); background: rgba(184,134,44,.12); }
-.hero-choice-btn.is-active { background: var(--gold); border-color: var(--gold); color: var(--charcoal); }
 
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 

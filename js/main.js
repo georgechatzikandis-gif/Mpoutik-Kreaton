@@ -36,26 +36,6 @@
     if (el) el.addEventListener('click', openGate);
   });
 
-  /* ---------- Hero Λιανική/Χονδρική choice ---------- */
-  const heroChoiceBtns = document.querySelectorAll('.hero-choice-btn');
-
-  function markActiveChoice(choice) {
-    heroChoiceBtns.forEach(btn => btn.classList.toggle('is-active', btn.dataset.choice === choice));
-  }
-
-  try {
-    markActiveChoice(sessionStorage.getItem(STORAGE_KEY));
-  } catch (e) {
-    // sessionStorage unavailable
-  }
-
-  heroChoiceBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      try { sessionStorage.setItem(STORAGE_KEY, btn.dataset.choice); } catch (e) {}
-      markActiveChoice(btn.dataset.choice);
-    });
-  });
-
   /* ---------- Mobile drawer ---------- */
   const burger = document.getElementById('burger');
   const drawer = document.getElementById('drawer');
