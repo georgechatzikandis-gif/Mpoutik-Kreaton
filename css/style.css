@@ -269,6 +269,28 @@ h2.light { color: var(--cream); }
   margin-bottom: 32px;
 }
 
+.hero-choice {
+  display: flex; align-items: center; flex-wrap: wrap;
+  justify-content: center; gap: 10px;
+  margin-bottom: 28px;
+}
+.hero-choice-label {
+  color: var(--cream-dim);
+  font-size: .82rem;
+  letter-spacing: .04em;
+}
+.hero-choice-btn {
+  padding: 8px 20px;
+  border: 1.5px solid rgba(246,239,228,.4);
+  border-radius: 999px;
+  color: var(--cream);
+  font-size: .85rem;
+  font-weight: 600;
+  transition: border-color .2s ease, background .2s ease, color .2s ease;
+}
+.hero-choice-btn:hover { border-color: var(--gold); background: rgba(184,134,44,.12); }
+.hero-choice-btn.is-active { background: var(--gold); border-color: var(--gold); color: var(--charcoal); }
+
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
 
 .scroll-cue {
