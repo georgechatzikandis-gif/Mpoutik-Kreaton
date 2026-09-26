@@ -16,11 +16,13 @@ npx http-server -p 8080
 
 ## Assets
 
-- `assets/logo/logo-mark.jpg` — το πραγματικό λογότυπο (crop από φωτογραφία
-  βιτρίνας). Χρησιμοποιείται στο header, gate, hero, footer, favicon.
+- `assets/logo/logo-mark.png` — το επίσημο λογότυπο (διαφανές φόντο).
+  Χρησιμοποιείται στο header, gate, hero, footer, favicon.
 - `assets/photos/` — φωτογραφίες καταστήματος (εξωτερικό, εσωτερικό, ιδιοκτήτης)
-  και `assets/photos/cuts/` — κοντινά πλάνα προϊόντων ανά κατηγορία, όλα
-  cropped/συμπιεσμένα από το αρχικό φωτογραφικό υλικό του καταστήματος.
+  και `assets/photos/cuts/` — κοντινά πλάνα προϊόντων ανά κατηγορία.
+- `assets/video/hero-loop.mp4` (+ `.webm` fallback) — το βίντεο background του
+  hero, χωρίς ήχο (muted autoplay), με `assets/photos/hero-video-poster.jpg`
+  ως poster frame.
 
 ## Προς συμπλήρωση πριν το production deploy
 
@@ -30,8 +32,6 @@ npx http-server -p 8080
 (το live status Ανοιχτά/Κλειστά στο `#hoursCard` χρωματίζεται πράσινο/κόκκινο
 βάσει αυτών). Παραμένουν placeholder:
 
-- **Βίντεο hero**: το `<video>` (`#heroVideo`) έχει `poster="assets/photos/hero.jpg"`
-  αλλά όχι πηγή βίντεο — αν υπάρξει αρχείο, ενεργοποιήστε το commented `<source>`.
 - **Google Review link**: το κουμπί "Κριτική στο Google" έχει placeholder
   `placeid=REPLACE_WITH_PLACE_ID` — αντικαταστήστε με το πραγματικό Place ID.
 - **Έτος έναρξης / γενιές**: `data-count` attributes στο `#about` (1985 / 3)

@@ -1,6 +1,14 @@
 (() => {
   'use strict';
 
+  /* ---------- Hero video ---------- */
+  const heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    const playPromise = heroVideo.play();
+    if (playPromise) playPromise.catch(() => {});
+  }
+
   /* ---------- Gate / splash: Λιανική vs Χονδρική ---------- */
   const gate = document.getElementById('gate');
   const gateBtns = document.querySelectorAll('.gate-btn');
