@@ -420,10 +420,7 @@ h2.light { color: var(--cream); }
   display: flex;
   gap: 20px;
   overflow-x: auto;
-  scroll-snap-type: x proximity;
-  scroll-padding-left: 24px;
   overscroll-behavior-x: contain;
-  -webkit-overflow-scrolling: touch;
   padding-bottom: 8px;
   scrollbar-width: none;
   cursor: grab;
@@ -431,15 +428,12 @@ h2.light { color: var(--cream); }
 .carousel::-webkit-scrollbar { display: none; }
 .carousel.is-dragging {
   cursor: grabbing;
-  scroll-snap-type: none;
   user-select: none;
 }
 .carousel.is-dragging .cut-card { pointer-events: none; }
 
 .cut-card {
   flex: 0 0 240px;
-  scroll-snap-align: start;
-  scroll-snap-stop: normal;
   background: var(--charcoal-soft);
   border-radius: 8px;
   overflow: hidden;
