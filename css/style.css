@@ -329,7 +329,7 @@ h2.light { color: var(--cream); }
   background-position: center 22%;
 }
 
-.section-overlay { position: absolute; inset: 0; background: rgba(246,239,228,.9); z-index: 1; }
+.section-overlay { position: absolute; inset: 0; background: rgba(246,239,228,.55); z-index: 1; }
 .section-overlay--light { background: rgba(15,12,9,.72); }
 
 .about .section-inner { max-width: 720px; }
