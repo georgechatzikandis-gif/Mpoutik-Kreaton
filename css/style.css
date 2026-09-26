@@ -116,17 +116,29 @@ h2.light { color: var(--cream); }
 }
 
 .gate-spinner {
-  width: 28px; height: 28px;
-  margin: 22px auto 0;
+  width: 40px; height: 40px;
+  margin: 26px auto 0;
   border-radius: 50%;
-  border: 2.5px solid rgba(246,239,228,.25);
+  border: 3px solid rgba(246,239,228,.2);
   border-top-color: var(--gold);
-  animation: gateSpin .8s linear infinite;
+  border-right-color: var(--gold);
+  animation: gateSpin .9s cubic-bezier(.5,0,.5,1) infinite;
 }
 @keyframes gateSpin { to { transform: rotate(360deg); } }
 
+.gate-loading-text {
+  margin-top: 14px;
+  color: var(--cream-dim);
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  animation: gatePulse 1.6s ease-in-out infinite;
+}
+@keyframes gatePulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
+
 @media (prefers-reduced-motion: reduce) {
-  .gate-spinner { animation-duration: 1.6s; }
+  .gate-spinner { animation-duration: 1.8s; }
+  .gate-loading-text { animation: none; opacity: .8; }
 }
 
 
