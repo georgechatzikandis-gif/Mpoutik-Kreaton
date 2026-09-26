@@ -109,7 +109,7 @@ h2.light { color: var(--cream); }
 
 .gate-logo-img {
   width: 140px; height: 140px;
-  margin: 0 auto 20px;
+  margin: 430px auto 20px;
   border-radius: 50%;
   object-fit: cover;
   border: 1.5px solid var(--gold);
