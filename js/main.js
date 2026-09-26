@@ -9,40 +9,31 @@
     if (playPromise) playPromise.catch(() => {});
   }
 
-  /* ---------- Gate / splash: Λιανική vs Χονδρική ---------- */
+  /* ---------- Gate: 3s intro splash, once per session ---------- */
   const gate = document.getElementById('gate');
-  const gateBtns = document.querySelectorAll('.gate-btn');
-  const STORAGE_KEY = 'mk-visitor-type';
+  const INTRO_SHOWN_KEY = 'mk-intro-shown';
 
-  function closeGate(choice) {
-    if (choice) sessionStorage.setItem(STORAGE_KEY, choice);
+  function closeGate() {
     gate.classList.add('is-hidden');
     document.body.style.overflow = '';
   }
 
-  function openGate() {
-    gate.classList.remove('is-hidden');
-    document.body.style.overflow = 'hidden';
-  }
-
+  let alreadyShown = false;
   try {
-    if (sessionStorage.getItem(STORAGE_KEY)) {
-      closeGate();
-    } else {
-      document.body.style.overflow = 'hidden';
-    }
+    alreadyShown = !!sessionStorage.getItem(INTRO_SHOWN_KEY);
   } catch (e) {
-    // sessionStorage unavailable — just show the gate once
+    // sessionStorage unavailable — show the intro every time
   }
 
-  gateBtns.forEach(btn => {
-    btn.addEventListener('click', () => closeGate(btn.dataset.choice));
-  });
-
-  ['navOptions', 'drawerOptions'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.addEventListener('click', openGate);
-  });
+  if (alreadyShown) {
+    closeGate();
+  } else {
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      closeGate();
+      try { sessionStorage.setItem(INTRO_SHOWN_KEY, '1'); } catch (e) {}
+    }, 3000);
+  }
 
   /* ---------- Mobile drawer ---------- */
   const burger = document.getElementById('burger');
