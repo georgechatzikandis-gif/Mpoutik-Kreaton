@@ -115,16 +115,22 @@ h2.light { color: var(--cream); }
   border: 1.5px solid var(--gold);
 }
 
-.gate-spinner {
-  width: 40px; height: 40px;
-  margin: 26px auto 0;
-  border-radius: 50%;
-  border: 3px solid rgba(246,239,228,.2);
-  border-top-color: var(--gold);
-  border-right-color: var(--gold);
-  animation: gateSpin .9s cubic-bezier(.5,0,.5,1) infinite;
+.gate-loadbar {
+  width: 160px;
+  height: 3px;
+  margin: 28px auto 0;
+  border-radius: 3px;
+  background: rgba(246,239,228,.18);
+  overflow: hidden;
 }
-@keyframes gateSpin { to { transform: rotate(360deg); } }
+.gate-loadbar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  animation: gateLoadFill 3s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes gateLoadFill { from { width: 0%; } to { width: 100%; } }
 
 .gate-loading-text {
   margin-top: 14px;
@@ -137,7 +143,7 @@ h2.light { color: var(--cream); }
 @keyframes gatePulse { 0%, 100% { opacity: .45; } 50% { opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .gate-spinner { animation-duration: 1.8s; }
+  .gate-loadbar-fill { animation-duration: .01s; }
   .gate-loading-text { animation: none; opacity: .8; }
 }
 
