@@ -426,8 +426,15 @@ h2.light { color: var(--cream); }
   -webkit-overflow-scrolling: touch;
   padding-bottom: 8px;
   scrollbar-width: none;
+  cursor: grab;
 }
 .carousel::-webkit-scrollbar { display: none; }
+.carousel.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  user-select: none;
+}
+.carousel.is-dragging .cut-card { pointer-events: none; }
 
 .cut-card {
   flex: 0 0 240px;

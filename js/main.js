@@ -151,6 +151,42 @@
   prevArrow.addEventListener('click', () => scrollCarousel(-1));
   nextArrow.addEventListener('click', () => scrollCarousel(1));
 
+  /* ---------- Carousel: click-and-drag scrolling (mouse) ---------- */
+  let isDragging = false;
+  let dragMoved = false;
+  let dragStartX = 0;
+  let dragStartScroll = 0;
+
+  carousel.addEventListener('pointerdown', (e) => {
+    if (e.pointerType !== 'mouse') return; // let touch use native swipe/momentum
+    isDragging = true;
+    dragMoved = false;
+    dragStartX = e.clientX;
+    dragStartScroll = carousel.scrollLeft;
+    carousel.classList.add('is-dragging');
+  });
+
+  window.addEventListener('pointermove', (e) => {
+    if (!isDragging) return;
+    const delta = e.clientX - dragStartX;
+    if (Math.abs(delta) > 4) dragMoved = true;
+    carousel.scrollLeft = dragStartScroll - delta;
+  });
+
+  function endDrag() {
+    if (!isDragging) return;
+    isDragging = false;
+    carousel.classList.remove('is-dragging');
+  }
+  window.addEventListener('pointerup', endDrag);
+  window.addEventListener('pointercancel', endDrag);
+
+  // Suppress the click on a card right after a drag, so dragging doesn't
+  // accidentally trigger card interactions.
+  carousel.addEventListener('click', (e) => {
+    if (dragMoved) { e.preventDefault(); e.stopPropagation(); dragMoved = false; }
+  }, true);
+
   /* ---------- Live opening hours status ---------- */
   const hours = {
     1: [['08:00', '19:00']],
