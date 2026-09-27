@@ -421,6 +421,7 @@ h2.light { color: var(--cream); }
   gap: 20px;
   overflow-x: auto;
   overscroll-behavior-x: contain;
+  touch-action: pan-x;
   padding-bottom: 8px;
   scrollbar-width: none;
   cursor: grab;
