@@ -40,10 +40,13 @@ button { font-family: inherit; border: none; background: none; cursor: pointer; 
 
 .section-inner {
   max-width: 1180px;
+  width: 100%;
+  min-width: 0;
   margin: 0 auto;
   padding: 0 24px;
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
 }
 
 .eyebrow {
