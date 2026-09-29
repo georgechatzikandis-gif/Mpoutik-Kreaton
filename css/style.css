@@ -103,19 +103,12 @@ h2.light { color: var(--cream); }
 }
 .gate.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
 
-.gate-overlay {
-  position: absolute; inset: 0;
-  background: linear-gradient(180deg, rgba(15,12,9,.55) 0%, rgba(15,12,9,.45) 45%, rgba(15,12,9,.85) 100%);
-}
-
 .gate-inner { position: relative; z-index: 1; text-align: center; padding: 24px; }
 
 .gate-logo-img {
-  width: 140px; height: 140px;
-  margin: 300px auto 0;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1.5px solid var(--gold);
+  width: 200px; height: 200px;
+  margin: 0 auto;
+  object-fit: contain;
 }
 
 .gate-loadbar {
