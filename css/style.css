@@ -346,7 +346,7 @@ h2.light { color: var(--cream); }
   max-width: 340px;
   aspect-ratio: 3/4;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 20%;
   border-radius: 8px;
   box-shadow: 0 20px 48px rgba(0,0,0,.4);
 }
