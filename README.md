@@ -33,7 +33,5 @@ npx http-server -p 8080
 (το live status Ανοιχτά/Κλειστά στο `#hoursCard` χρωματίζεται πράσινο/κόκκινο
 βάσει αυτών). Παραμένουν placeholder:
 
-- **Google Review link**: το κουμπί "Κριτική στο Google" έχει placeholder
-  `placeid=REPLACE_WITH_PLACE_ID` — αντικαταστήστε με το πραγματικό Place ID.
 - **Έτος έναρξης / γενιές**: `data-count` attributes στο `#about` (1985 / 3)
   είναι ενδεικτικά — βάλτε τα πραγματικά στοιχεία του καταστήματος.
