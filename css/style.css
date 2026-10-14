@@ -335,6 +335,9 @@ h2.light { color: var(--cream); }
     background-position: center;
     background-color: var(--charcoal);
   }
+  /* Taller section so the fixed-height text card takes up a smaller share
+     of it, leaving much more of the photo visible above and below. */
+  .quote.parallax-section { min-height: 820px; }
 }
 
 .section-overlay { position: absolute; inset: 0; background: rgba(246,239,228,.55); z-index: 1; }
@@ -523,7 +526,7 @@ h2.light { color: var(--cream); }
   max-width: 780px; text-align: center; margin: 0 auto;
   background: var(--charcoal);
   border-radius: 14px;
-  padding: 36px 32px;
+  padding: 20px 28px;
 }
 .quote-mark { font-family: var(--font-display); font-size: 5rem; color: var(--gold); line-height: 1; display: block; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
 .quote blockquote {
