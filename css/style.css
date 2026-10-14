@@ -325,9 +325,25 @@ h2.light { color: var(--cream); }
   background-position: center 22%;
 }
 
+/* This photo is portrait, so on a wide/short desktop section a cover crop
+   hides most of it (just a strip of tile wall, no Kostas). Show it whole
+   above mobile widths, where cover already frames it fine. */
+@media (min-width: 701px) {
+  .parallax-bg--ambience {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--charcoal);
+  }
+}
+
 .section-overlay { position: absolute; inset: 0; background: rgba(246,239,228,.55); z-index: 1; }
 .section-overlay--light { background: rgba(15,12,9,.72); }
 .section-overlay--clear { background: rgba(15,12,9,.2); }
+
+@media (min-width: 701px) {
+  .quote .section-overlay--clear { background: rgba(15,12,9,.5); }
+}
 
 .about .section-inner { max-width: 720px; }
 
