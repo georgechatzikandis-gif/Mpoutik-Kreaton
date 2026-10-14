@@ -392,7 +392,13 @@ h2.light { color: var(--cream); }
   margin-top: 4px;
 }
 
-.stats { display: flex; gap: 48px; margin-top: 44px; flex-wrap: wrap; }
+.stats {
+  display: flex; gap: 48px; flex-wrap: wrap;
+  margin-top: 44px;
+  background: rgba(246,239,228,.85);
+  border-radius: 10px;
+  padding: 20px 28px;
+}
 .stat-number {
   display: block;
   font-family: var(--font-display);
