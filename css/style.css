@@ -335,9 +335,6 @@ h2.light { color: var(--cream); }
     background-position: center;
     background-color: var(--charcoal);
   }
-  /* Taller section so the fixed-height text card takes up a smaller share
-     of it, leaving much more of the photo visible above and below. */
-  .quote.parallax-section { min-height: 820px; }
 }
 
 .section-overlay { position: absolute; inset: 0; background: rgba(246,239,228,.55); z-index: 1; }
@@ -522,19 +519,14 @@ h2.light { color: var(--cream); }
 .review-cta h3 { font-size: 1.5rem; margin-bottom: 26px; }
 
 /* ============ QUOTE ============ */
-.quote-inner {
-  max-width: 780px; text-align: center; margin: 0 auto;
-  background: var(--charcoal);
-  border-radius: 14px;
-  padding: 20px 28px;
-}
+.quote-inner { max-width: 780px; text-align: center; margin: 0 auto; }
 .quote-mark { font-family: var(--font-display); font-size: 5rem; color: var(--gold); line-height: 1; display: block; text-shadow: 0 2px 12px rgba(0,0,0,.5); }
 .quote blockquote {
   font-size: clamp(1.3rem, 2.6vw, 1.9rem);
-  font-weight: 500;
+  font-weight: 700;
   font-style: italic;
   color: var(--cream);
-  text-shadow: 0 2px 14px rgba(0,0,0,.6);
+  text-shadow: 0 2px 4px rgba(0,0,0,.85), 0 0 24px rgba(0,0,0,.7);
   margin: 10px 0 26px;
 }
 .quote cite {
@@ -543,8 +535,8 @@ h2.light { color: var(--cream); }
   text-transform: uppercase;
   font-size: .8rem;
   color: var(--gold-light);
-  font-weight: 600;
-  text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0,0,0,.9), 0 0 16px rgba(0,0,0,.7);
 }
 
 /* ============ VISIT ============ */
