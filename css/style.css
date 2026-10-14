@@ -332,9 +332,17 @@ h2.light { color: var(--cream); }
   .parallax-bg--ambience {
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left center;
     background-color: var(--charcoal);
   }
+  /* Put the quote card over on the right so it no longer sits on top of
+     (and hides) the photo, which now hugs the left edge. */
+  .quote .quote-inner {
+    margin: 0 0 0 auto;
+    max-width: 480px;
+    text-align: left;
+  }
+  .quote .quote-mark { text-align: left; }
 }
 
 .section-overlay { position: absolute; inset: 0; background: rgba(246,239,228,.55); z-index: 1; }
